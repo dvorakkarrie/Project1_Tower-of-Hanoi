@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="./css/styles.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tower of Hanoi</title>
+</head>
+<body>
+    <header>
+        <h1 class="title">Tower of Hanoi</h1>
+        <h3 id="myPopUp" class="instructions">Instructions</h3>
+            <div class="popUpContent popUp">
+                <span class="close">&times;</span>
+                <ul class="popUpList">
+                    <li>1. Only one disk can be moved at a time.</li>
+                    <li>2. No larger disk can appear on a smaller disk.</li>
+                    <li>3. Only one top most disk can be moved from one tower and it can appear only at the top most position of another tower.  </li>
+                    </li>4. You are to transfer all disks to the right hand tower in the fewest possible moves.</li>
+                </ul>
+            </div>
+        <div class="level">
+            <label id="numberOfDisks" class="level">Number of Disks</label>
+            <select id="dropdown" class="level">
+                <option class=level-a>3</option>
+                <option class=level-b>4</option>
+                <option class=disks-c>5</option>
+            </select>
+        </div>
+    </header>
+    <main> 
+        <div class="container">
+            <div class="moves score">
+                <div id="moves-label" class="moves score">Moves</div>
+                <div id="moves-counter" class="moves score">0</div>
+                <div id="time-label" class="time score">Time</div>
+                <div id="time-counter" class="time score">0:00</div>
+            </div>
+            <div class="towerContainer">
+                <div id="tower-a" class="towers">Tower A
+                    <div id="disk-1" class="disks">Disk 1</div>
+                    <div id="disk-2" class="disks">Disk 2</div>
+                    <div id="disk-3" class="disks">Disk 3</div>
+                </div>
+            </div>
+            <div class="towerContainer">
+                <div id="tower-b" class="towers">Tower B</div>
+            </div>
+            <div class="towerContainer">
+                <div id="tower-c" class="towers">Tower C</div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="containerButtons">
+            <button class="restart">Restart</button>
+        </div>
+    </footer>
+    <script src="./js/main.js"></script>
+</body>
+</html>

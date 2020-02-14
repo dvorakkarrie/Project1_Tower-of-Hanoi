@@ -1,0 +1,161 @@
+body {
+    background-color: rgb(249, 252, 216);
+    color: rgb(169, 10, 10);
+    font-size: 18px;
+    font-family: cursive, sans-serif;
+    height: 900px;
+}
+header {
+    font-weight: 600;
+    height: 200px;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 800;
+    text-align: center;
+    margin: auto;
+    padding: 5px;
+}
+h3 {
+    margin: auto;
+    padding: 5px;
+    text-align: center;
+}
+.level {
+    display: inline;
+    justify-content: space-around;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0 10px;
+}
+select {
+    border: 1px black solid;
+    border-radius: 2em;
+}
+main {
+    height: 400px;
+}
+.score {
+    justify-content: space-evenly;
+    padding: 2px;
+    text-align: center;
+    width: 100px;
+}
+.moves-label {
+    font-weight: 800;
+    margin-right: 50px;
+}
+.time-label {
+    font-weight: 800;
+}
+#moves-counter {
+    background-color: rgb(244, 245, 239);
+    border: 2px black solid;
+    margin: 0 0 50px;
+    text-align: center;
+}
+#time-counter {
+    background-color: rgb(244, 245, 239);
+    border: 2px black solid;
+    margin: 0 0 50px;
+    text-align: center;
+}
+.towerContainer {
+    border: 1px black solid;
+    display: flex;
+
+}
+.towers { 
+    background-color: black;
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column-reverse;
+    height: 26px;
+    list-style: none;
+    margin: 380px 0 0;
+    width: 250px;
+    transform: translateY(-50%);
+    text-align: center;
+}
+.disks {
+    border: 2px black solid;
+    color: black;
+    border-radius: 20px;
+    flex-direction: column-reverse;
+    height: 22px;
+    margin: auto;
+}
+#disk-1 {
+    width: 225px;
+    background-color: red;
+}
+#disk-2 {
+    width: 200px;
+    background-color: orange;
+}
+#disk-3 {
+    width: 175px;
+    background-color: yellow;
+}
+#disk-4 {
+    width: 150px;
+    background-color: greenyellow;
+}
+#disk-5 {
+    width: 125px;
+    background-color: green;
+}
+#disk-6 {
+    width: 100px;
+    background-color: blue;
+}
+#disk-7 {
+    width: 75px;
+    background-color: navy;
+}
+#disk-8 {
+    width: 50px;
+    background-color: purple;
+}
+.container {
+    display: flex;
+    height: 400px;
+    justify-content: space-between;
+    margin: auto;
+    text-align: center;
+}
+button {
+    background-color: rgb(169, 10, 10);
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    font-size: 18px;
+    padding: 5px 15px;
+    margin: 40px auto;
+}
+.popUp {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(249, 252, 216);
+}
+#myPopUp {
+    text-decoration-line: underline;
+}
+.popUpContent {
+    background-color: rgb(249, 252, 216);
+    border: 2px black solid;
+    margin: auto;
+    padding: 10px;
+}
+.close {
+    color: green;
+    float: right;
+}
