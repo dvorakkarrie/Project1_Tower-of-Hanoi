@@ -22,121 +22,6 @@ h3 {
     padding: 5px;
     text-align: center;
 }
-.level {
-    display: inline;
-    justify-content: space-around;
-    font-size: 16px;
-    font-weight: 600;
-    margin: 0;
-    padding: 0 10px;
-}
-select {
-    border: 1px black solid;
-    border-radius: 2em;
-}
-main {
-    height: 400px;
-}
-.score {
-    justify-content: space-evenly;
-    padding: 2px;
-    text-align: center;
-    width: 100px;
-}
-.moves-label {
-    font-weight: 800;
-    margin-right: 50px;
-}
-.time-label {
-    font-weight: 800;
-}
-#moves-counter {
-    background-color: rgb(244, 245, 239);
-    border: 2px black solid;
-    margin: 0 0 50px;
-    text-align: center;
-}
-#time-counter {
-    background-color: rgb(244, 245, 239);
-    border: 2px black solid;
-    margin: 0 0 50px;
-    text-align: center;
-}
-.towerContainer {
-    border: 1px black solid;
-    display: flex;
-
-}
-.towers { 
-    background-color: black;
-    border-radius: 20px;
-    color: white;
-    display: flex;
-    flex-direction: column-reverse;
-    height: 26px;
-    list-style: none;
-    margin: 380px 0 0;
-    width: 250px;
-    transform: translateY(-50%);
-    text-align: center;
-}
-.disks {
-    border: 2px black solid;
-    color: black;
-    border-radius: 20px;
-    display: block;
-    flex-direction: column-reverse;
-    height: 50px;
-    margin: auto;
-}
-.disk-1 {
-    width: 225px;
-    background-color: red;
-}
-.disk-2 {
-    width: 200px;
-    background-color: orange;
-}
-.disk-3 {
-    width: 175px;
-    background-color: yellow;
-}
-.disk-4 {
-    width: 150px;
-    background-color: greenyellow;
-}
-.disk-5 {
-    width: 125px;
-    background-color: green;
-}
-.disk-6 {
-    width: 100px;
-    background-color: blue;
-}
-.disk-7 {
-    width: 75px;
-    background-color: navy;
-}
-.disk-8 {
-    width: 50px;
-    background-color: purple;
-}
-.container {
-    display: flex;
-    height: 400px;
-    justify-content: space-between;
-    margin: auto;
-    text-align: center;
-}
-button {
-    background-color: rgb(169, 10, 10);
-    border-radius: 20px;
-    color: white;
-    display: flex;
-    font-size: 18px;
-    padding: 5px 15px;
-    margin: 40px auto;
-}
 .popUp {
     background-color: rgb(247, 233, 169);
     border: 2px black solid;
@@ -153,6 +38,125 @@ button {
 #myInstructions {
     text-decoration-line: underline;
 }
+.level {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0 10px;
+}
+select {
+    border: 1px black solid;
+    border-radius: 20px;
+    font-size: 18px;
+    text-align: center;
+    width: 40px;
+}
+.dropdownButton {
+    background-color: rgb(169, 10, 10);
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    padding: 5px 15px;
+    margin: 0 20px;
+}
+.counter {
+    padding: 2px;
+    text-align: center;
+    width: 100px;
+    margin: 50px;
+    text-align: center;
+}
+.moves-label {
+    font-weight: 800;
+}
+.time-label {
+    font-weight: 800;
+}
+#moves-counter {
+    background-color: rgb(244, 245, 239);
+    border: 2px black solid;
+    margin: 0 0 50px;
+}
+#time-counter {
+    background-color: rgb(244, 245, 239);
+    border: 2px black solid;
+}
+.towerContainer {
+    border: 1px black solid;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+.tower { 
+    background-color: black;
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column-reverse;
+    height: 26px;
+    list-style: none;
+    margin: 380px 0 0;
+    width: 250px;
+    transform: translateY(-50%);
+    text-align: center;
+    
+}
+.disk {
+    border: 2px black solid;
+    color: black;
+    border-radius: 20px;
+    display: block;
+    flex-direction: column-reverse;
+    height: 50px;
+    margin: auto;
+    width: 225px;
+}
+.disk1 {
+    width: 225px;
+    background-color: red;
+}
+.disk2 {
+    width: 200px;
+    background-color: orange;
+}
+.disk3 {
+    width: 175px;
+    background-color: yellow;
+}
+.disk4 {
+    width: 150px;
+    background-color: greenyellow;
+}
+.disk5 {
+    width: 125px;
+    background-color: green;
+}
+.disk6 {
+    width: 100px;
+    background-color: blue;
+}
+.disk7 {
+    width: 75px;
+    background-color: navy;
+}
+.disk8 {
+    width: 50px;
+    background-color: purple;
+}
+
+button {
+    background-color: rgb(169, 10, 10);
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    font-size: 18px;
+    padding: 5px 15px;
+    margin: 40px auto;
+}
 .close {
     background-color: rgb(169, 10, 10);
     border: 2px black solid;
@@ -163,16 +167,4 @@ button {
     height: 30px;
     width: 30px;
     text-align: center;
-}
-.dropdownButton {
-    background-color: rgb(169, 10, 10);
-    border-radius: 20px;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    left: 10px;
-    top: 0;
-    font-size: 12px;
-    padding: 5px 10px;
-    margin: 0 140px;
 }

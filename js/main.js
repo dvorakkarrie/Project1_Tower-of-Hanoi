@@ -14,9 +14,11 @@ const popUp = document.querySelector('#myPopUp')
 const close = document.querySelector('.close')
 
 // Defined variables for the user to select the desired number of disks.
-const numberOfDisksLabel = document.querySelector('numberOfDisks')
-const dropdown = document.querySelector('.dropdown')
+const numberOfDisksLabel = document.querySelector('.numberOfDisks')
+const dropdown = document.querySelectorAll('.dropdown')
 const dropdownButton = document.querySelector('.dropdownButton')
+let level = document.querySelector('.dropdown').value
+console.log(level)
 
 // Defined variables to count the moves and time it takes for the player to complete the game.
 const moveCounter = document.querySelector('#moves-counter')
@@ -24,13 +26,23 @@ let timeCounter = document.querySelector('#time-counter')
 let minutes = 0
 let seconds = 0
 let timeString
+let timeVariable
 
-const towerA = document.querySelector('.tower-a')
-console.log(towerA)
-const towerB = document.querySelector('.tower-b')
-console.log(towerB)
-const towerC = document.querySelector('.tower-c')
-console.log(towerC)
+
+let towers = document.querySelectorAll('.tower')
+console.log(towers)
+let source = document.querySelector('#source')
+const auxiliary = document.querySelector('#auxiliary')
+const destination = document.querySelector('#destination')
+console.log(source,auxiliary,destination)
+
+let disk = document.querySelectorAll('.disk')
+let disk1 = document.querySelector('.disk1')
+let disk2 = document.querySelector('.disk2')
+let disk3 = document.querySelector('.disk3')
+let disk4 = document.querySelector('.disk4')
+let disk5 = document.querySelector('.disk5')
+console.log(disk,disk1,disk2,disk3,disk4,disk5)
 
 // Defined a variable for the user to restart the game.
 const restart = document.querySelector('.restart')
@@ -46,20 +58,24 @@ function closePopUp() {
 }
 close.addEventListener('click', closePopUp)
 
-// Created a function to change the number of disks.
-function getSelectedLevel() {
-    let level = document.querySelector('.dropdown').value
-    console.log(level)
-}
-dropdownButton.addEventListener('click', getSelectedLevel)
 
 function countMoves() {
     moveCounter.textContent++
 }
+function moveDisk () {
+    console.log("ready to move a disk?")
+    
+}
+
+// Created a function to alert the user they won the game.
+function winMessage() {
+    clearInterval(timeVariable)
+    alert("You won!")
+    restartGame()
+}
 
 // Created a function to count the time.
 function countTime() {
-    
     ++seconds
     if (seconds < 10) {
         timeString = "0" + seconds
@@ -70,18 +86,47 @@ function countTime() {
         minutes++
         timeString = seconds + ""
     }
-    console.log(timeString)
     timeCounter.textContent = `${minutes}:${timeString}`
-    console.log(timeCounter)
 }
-setInterval(countTime,1000)
+
+function addNewDisk (level) {
+    label = `disk${level}`
+    console.log("Label" + label)
+    newDisk = document.createElement('div')
+    newDisk.setAttribute('class',`disk ${label}`)
+    newDisk.textContent = `Disk ${level}`
+    source.appendChild(newDisk);
+    
+    console.log(level)
+    console.log(newDisk)
+    return disk4
+}
+
+// Created a function to set up the level, number of disks and timer. 
+function getSelectedLevel() {
+
+    level = document.querySelector('.dropdown').value
+    if (level === "4") {
+        addNewDisk(level)
+        disk4 = newDisk
+        disk4.addEventListener('click',moveDisk)
+    } else if (level === "5") {
+        addNewDisk(4)
+        disk4 = newDisk
+        addNewDisk(5)
+        disk5 = newDisk
+        disk5.addEventListener('click',moveDisk)
+    } else {
+        disk3.addEventListener('click',moveDisk)}
+    console.log(`Level is ${level} and ${disk.length}`
+    )
+    dropdownButton.style.display = "none"
+    timeVariable = setInterval(countTime,1000) 
+}
+dropdownButton.addEventListener('click', getSelectedLevel)
 
 // Created a function to restart the game.
 function restartGame() {
     location.reload();
 }
 restart.addEventListener('click', restartGame)
-
-
-
-

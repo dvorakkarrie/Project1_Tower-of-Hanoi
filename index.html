@@ -26,32 +26,24 @@
                 <option value="4">4</option>
                 <option value="5">5</option>
             </select>
-            <button class="dropdownButton">Update</button>
+            <button class="dropdownButton">Select Level</button>
         </div>
     </header>
-    <main> 
-        <div class="container">
-            <div class="moves score">
-                <div id="moves-label" class="moves score">Moves</div>
-                <div id="moves-counter" class="moves score">0</div>
-                <div id="time-label" class="time score">Time</div>
-                <div id="time-counter" class="time score">0:00</div>
-            </div>
-            <div class="towerContainer">
-                <div class="towers tower-a">Tower A
-                    <div class="disks disk-1">Disk 1</div>
-                    <div class="disks disk-2">Disk 2</div>
-                    <div class="disks disk-3">Disk 3</div>
-                </div>
-            </div>
-            <div class="towerContainer">
-                <div class="towers tower-b">Tower B</div>
-            </div>
-            <div class="towerContainer">
-                <div class="towers tower-c">Tower C</div>
-            </div>
+    <div class="towerContainer">
+        <div class="counter">
+            <div id="moves-label" class="moves score">Moves</div>
+            <div id="moves-counter" class="moves score">0</div>
+            <div id="time-label" class="time score">Time</div>
+            <div id="time-counter" class="time score">0:00</div>
         </div>
-    </main>
+        <div class="tower" id="source">Source
+            <div class="disk disk1">Disk 1</div>
+            <div class="disk disk2">Disk 2</div>
+            <div class="disk disk3">Disk 3</div>                    
+        </div>
+        <div class="tower" id="auxiliary">Auxiliary</div>
+        <div class="tower" id="destination">Destination</div>
+    </div>
     <footer>
         <div class="footerContainer">
             <button class="restart">Restart</button>
