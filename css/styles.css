@@ -74,11 +74,10 @@ select {
     margin: 0 20px;
 }
 .counter {
+    margin: 40px;
     padding: 2px;
     text-align: center;
     width: 100px;
-    margin: 50px;
-    text-align: center;
 }
 .moves-label {
     font-weight: 800;
@@ -103,7 +102,7 @@ select {
 .tower { 
     background-color: black;
     border-radius: 20px;
-    color: white;
+    color: black;
     display: flex;
     flex-direction: column-reverse;
     height: 30px;
@@ -115,11 +114,10 @@ select {
 }
 .tower:hover {
     background-color: gray;
+    color: gray;
 }
 .disk {
-    border: 2px black solid;
     border-radius: 20px;
-    color: black;
     display: block;
     flex-direction: column-reverse;
     height: 50px;
@@ -127,36 +125,49 @@ select {
     width: 225px;
 }
 .disk1 {
+    background-color: rgb(223, 44, 44);
+    color: rgb(223, 44, 44);
     width: 250px;
-    background-color: rgb(223, 44, 44)
+    
 }
 .disk2 {
+    color: rgb(218, 120, 35);
     width: 225px;
     background-color: rgb(218, 120, 35);
 }
 .disk3 {
+    color: rgb(223, 223, 41);
     width: 200px;
     background-color: rgb(223, 223, 41);
 }
 .disk4 {
+    color: rgb(102, 216, 44);
     width: 175px;
     background-color: rgb(102, 216, 44);
 }
 .disk5 {
+    color: rgb(43, 223, 226);
     width: 150px;
     background-color: rgb(43, 223, 226);
 }
 .disk6 {
+    color: rgb(58, 119, 224);
     width: 125px;
     background-color: rgb(58, 119, 224);
 }
 .disk7 {
+    color: rgb(58, 119, 224);
     width: 100px;
-    background-color: rgb(127, 57, 226);
+    background-color: rgb(58, 119, 224);
 }
 .disk8 {
+    color: rgb(218, 53, 166);
     width: 75px;
     background-color: rgb(218, 53, 166);
+}
+.space {
+    display: flex;
+    width: 100px;
 }
 .message {
     display: none;
