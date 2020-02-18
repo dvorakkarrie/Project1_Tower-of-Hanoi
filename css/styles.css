@@ -7,7 +7,7 @@ body {
 }
 header {
     font-weight: 600;
-    height: 175px;
+    height: 200px;
 }
 
 h1 {
@@ -21,26 +21,33 @@ h3 {
     margin: auto;
     padding: 5px;
     text-align: center;
+    text-decoration-line: underline;
 }
 .popUp {
-    background-color: rgb(247, 233, 169);
+    background-color: rgb(247, 224, 122);
     border: 2px black solid;
     display: none;
     height: auto;
-    left: 200px;
-    position: absolute;
-    width: auto;
+    margin: auto;
+    padding: 0 0 10px;
+    position: relative;
+    width: 600px;
 }
-#myPopUp {
-    font-size: 18px;
-    
-}
-#myInstructions {
-    text-decoration-line: underline;
-}
-#instructionsTitle {
+#popUpTitle {
     font-size: 26px;
     font: bold;
+}
+.close {
+    background-color: rgb(169, 10, 10);
+    border: 2px black solid;
+    color: white;
+    float: right;
+    font-family: sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    height: 35px;
+    width: 35px;
+    text-align: center;
 }
 .level {
     display: flex;
@@ -153,25 +160,28 @@ select {
     width: 75px;
     background-color: rgb(218, 53, 166);
 }
-#wonMessage {
-    color: rgb(169, 10, 10);
+.message {
     display: none;
     font-family: sans-serif;
-    font-size: 80px;
     margin: auto;
-    padding: 50px;
     text-align: center;
+}
+#wonMessage {
+    font-size: 80px;
+    padding: 50px;
 }
 #restartMessage {
     color: rgb(165, 127, 127);
-    display: none;
+    font-weight: 400;
+}
+.error {
+    /* display: none; */
     font-family: sans-serif;
     font-weight: 400;
     margin: auto;
     text-align: center;
-
 }
-#restartBold {
+#bold {
     color: rgb(169, 10, 10);
     font-weight: 800;
 }
@@ -186,15 +196,4 @@ button {
 }
 button:hover {
     background-color: rgb(169, 10, 10);
-}
-.close {
-    background-color: rgb(169, 10, 10);
-    border: 2px black solid;
-    color: white;
-    float: right;
-    font-size: 25px;
-    font-weight: 600;
-    height: 30px;
-    width: 30px;
-    text-align: center;
 }

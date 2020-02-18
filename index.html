@@ -9,10 +9,10 @@
 <body>
     <header>
         <h1 class="title">Tower of Hanoi</h1>
-        <h3 id="myInstructions" class="instructions">Instructions</h3>
-            <div id="myPopUp" class="popUp">
-                <span class="close">&times;</span>
-                <ul class="popUpHeader"><span id="instructionsTitle">Rules of the game:</span>
+        <h3 class="instructions">Instructions</h3>
+            <div class="popUp" id="instructionPopUp">
+                <span class="close">&times</span>
+                <ul class="open"><span id="popUpTitle">Rules of the game:</span>
                     <li class="popUpList">Only one disk can be moved at a time.</li>
                     <li class="popUpList">No larger disk can appear on a smaller disk.</li>
                     <li class="popUpList">Only one disk at the top of a tower can be moved to the top of another tower.</li>
@@ -31,8 +31,12 @@
             </select>
             <button class="dropdownButton">Select Level</button>
         </div>
-        <div id='wonMessage'>You Won!</div>
-        <div id='restartMessage'>Select the <span id="restartBold">Restart</span> button to play again.</div>
+        <div class='message' id='wonMessage'>You Won!</div>
+        <div class='message' id='restartMessage'>Select the <span id="bold">Restart</span> button to play again.</div>
+        <div class='popUp' id='errorPopUp'><span class="close closeError">&times</span>
+            <ul class="open"><span id="popUpTitle">Error:</span>
+            <li class="popUpList">A larger disk can not be placed on a smaller disk.</li>
+        </div>
     </header>
     <div class="towerContainer">
         <div class="counter">

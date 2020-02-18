@@ -9,15 +9,18 @@
 //  - Additionally, your project should stick with KISS (Keep It Stupid Simple) and DRY (Don't Repeat Yourself) principles.
 
 (function(window){
-    //Defined variables for the Instructionsn pop up window.
+    // Defined variables for the Instructions pop up window.
     const instructions = document.querySelector('.instructions')
-    const popUp = document.querySelector('#myPopUp')
+    const instructionPopUp = document.querySelector('#instructionPopUp')
     const close = document.querySelector('.close')
+    const closeError = document.querySelector('.closeError')
+
+    // Defined variables for the Error pop up window.
+    const errorPopUp = document.querySelector('#errorPopUp')
 
     // Defined variables for the user to select the desired number of disks.
     const levelDiv = document.querySelector('.level')
     const dropdownButton = document.querySelector('.dropdownButton')
-
 
     // Defined variables to count the moves and time it takes for the player to complete the game.
     const moveCounter = document.querySelector('#moves-counter')
@@ -36,7 +39,6 @@
     // Defined a variable for the user to restart the game.
     const restart = document.querySelector('.restart')
 
-
     // Created a function to restart the game.
     function restartGame() {
         location.reload();
@@ -45,36 +47,50 @@
 
     // Created functions and event listeners for the pop up instructions window.
     function openPopUp() {
-        popUp.style.display = 'block';
+        instructionPopUp.style.display = 'block'
     }
     instructions.addEventListener('click', openPopUp)
 
     function closePopUp() {
-        popUp.style.display = "none"
+        instructionPopUp.style.display = "none"
     }
     close.addEventListener('click', closePopUp)
+
+    // Created functions and event listeners for the pop up error window.
+    function openErrorPopUp() {
+        errorPopUp.style.display = 'block'
+    }
+
+    function closeErrorPopUp() {
+        errorPopUp.style.display = "none"
+    }
+    closeError.addEventListener('click', closeErrorPopUp)
 
     // Created a function to alert the user they won the game.
     function win() {
         if (destination.childElementCount === parseInt(this.level)) {
-            let wonMessage = document.querySelector('#wonMessage')
-            let restartMessage = document.querySelector('#restartMessage')
-            wonMessage.style.display = "block"
+            let message = document.querySelector('.message')
+            message.style.display = "block"
             restartMessage.style.display = "block"
             clearInterval(timeVariable)
         }
     }
 
+    // Created a function to move disks to the selected tower.
     function moveToTower(selectedDisk) {
         if (selectedTower.lastElementChild != null && selectedTower.lastElementChild.id > selectedDisk.id) {
-            alert("A larger disk can not be placed on a smaller disk.")
+            openErrorPopUp()
         } else {
-            selectedTower.append(selectedDisk), selectedDisk.style.border = "solid", moveCounter.textContent++, 
+            selectedTower.append(selectedDisk)
+            selectedDisk.style.border = "solid"
+            moveCounter.textContent++, 
             win()
         }
     }
 
+    // Created a function to identify the disk or tower that was selected before moving the disk.
     function moveDisk(event) {
+        console.log(event)
         if (event.target === source.lastElementChild || event.target === auxiliary.lastElementChild || 
             event.target === destination.lastElementChild) {
             selectedDisk = event.target
@@ -102,6 +118,7 @@
         timeCounter.textContent = `${minutes}:${timeString}`
     }
 
+    // Created functions to add the selected number of disks to the game.
     function addDisk4() {
         let disk4 = document.createElement('div')
         disk4.classList.add('disk')
@@ -147,7 +164,6 @@
     function getSelectedLevel() {
         level = document.querySelector('.dropdown').value
         let i = level - 1
-
 
         if (parseInt(level) > 3) {
             addDisk4()
