@@ -7,7 +7,7 @@ body {
 }
 header {
     font-weight: 600;
-    height: 200px;
+    height: 250px;
 }
 
 h1 {
@@ -29,12 +29,12 @@ h3 {
     display: none;
     height: auto;
     margin: auto;
-    padding: 0 0 10px;
+    padding: 0 0 0 25px;
     position: relative;
-    width: 600px;
+    width: 700px;
 }
 #popUpTitle {
-    font-size: 26px;
+    font-size: 22px;
     font: bold;
 }
 .close {
@@ -45,8 +45,8 @@ h3 {
     font-family: sans-serif;
     font-size: 25px;
     font-weight: 600;
-    height: 35px;
-    width: 35px;
+    height: 30px;
+    width: 30px;
     text-align: center;
 }
 .level {
@@ -96,7 +96,6 @@ select {
     border: 2px black solid;
 }
 .towerContainer {
-    border: 1px black solid;
     display: none;
     justify-content: space-between;
     margin: auto;
@@ -113,7 +112,6 @@ select {
     width: 300px;
     transform: translateY(-50%);
     text-align: center;
-    
 }
 .tower:hover {
     background-color: gray;
@@ -167,15 +165,16 @@ select {
     text-align: center;
 }
 #wonMessage {
-    font-size: 80px;
+    color: rgb(0, 128, 0);
+    font-size: 100px;
     padding: 50px;
 }
 #restartMessage {
-    color: rgb(165, 127, 127);
+    color: rgb(0, 128, 0);
     font-weight: 400;
 }
 .error {
-    /* display: none; */
+    display: none;
     font-family: sans-serif;
     font-weight: 400;
     margin: auto;

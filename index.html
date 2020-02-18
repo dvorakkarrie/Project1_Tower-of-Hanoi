@@ -13,11 +13,17 @@
             <div class="popUp" id="instructionPopUp">
                 <span class="close">&times</span>
                 <ul class="open"><span id="popUpTitle">Rules of the game:</span>
-                    <li class="popUpList">The goal is to transfer all disks to the right hand tower in the fewest possible moves.</li>
-                    <li class="popUpList">Three towers are used:  Source where disks begin, Auxiliary as a temporary tower, and disks end at Destination.</li>
-                    <li class="popUpList">Only one disk can be moved at a time.</li>
-                    <li class="popUpList">No larger disk can appear on a smaller disk.</li>
-                    <li class="popUpList">Only one disk at the top of a tower can be moved to the top of another tower.</li>
+                    <li class="popUpList">The objective is to transfer all disks to the right hand tower in the fewest possible moves.</li>
+                    <li class="popUpList">Only one disk at the top of a tower can be moved at a time to the top of another tower.</li>
+                    <li class="popUpList">A larger disk can not be placed on top of a smaller disk.</li>
+                    <li class="popUpList">Three towers are used to solve this puzzle.
+                        <ul>
+                            <li class="popUpList">Source - where disks begin</li>
+                            <li class="popUpList">Auxiliary - temporary tower</li>
+                            <li class="popUpList">Destination - where disks end</li>
+                        </ul>
+                    </li>
+                    
                 </ul>
             </div>
         <div class="level">
@@ -32,7 +38,7 @@
             </select>
             <button class="dropdownButton">Select Level</button>
         </div>
-        <div class='message' id='wonMessage'>You Won!</div>
+        <div class='message' id='wonMessage'>Y&nbsp;o&nbsp;u&nbsp;&nbsp;&nbsp;W&nbsp;o&nbsp;n !</div>
         <div class='message' id='restartMessage'>Select the <span id="bold">Restart</span> button to play again.</div>
         <div class='popUp' id='errorPopUp'><span class="close closeError">&times</span>
             <ul class="open"><span id="popUpTitle">Error:</span>

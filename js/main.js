@@ -79,6 +79,9 @@
             message.style.display = "block"
             restartMessage.style.display = "block"
             clearInterval(timeVariable)
+            instructions.removeEventListener('click', openPopUp)
+            dropdownButton.removeEventListener('click',getSelectedLevel)
+            towerContainer.removeEventListener('click',moveDisk)
         }
     }
 
