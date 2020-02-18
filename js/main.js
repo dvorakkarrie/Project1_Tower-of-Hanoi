@@ -18,7 +18,7 @@
 
     // Defined variables for the Error pop up window.
     const errorPopUp = document.querySelector('#errorPopUp')
-    const popUpList = document.querySelector('.popUpList')
+    const popUpListError = document.querySelector('.popUpListError')
     const errorLargerDisk = 'A larger disk can not be placed on a smaller disk.'
     const errorDiskNotSelected = 'A disk needs to be selected before selecting a tower.'
 
@@ -62,8 +62,9 @@
     close.addEventListener('click', closePopUp)
 
     // Created functions and event listeners for the pop up error window.
-    function openErrorPopUp(message) {
-        popUpList.innerText = message
+    function openErrorPopUp(errorMessage) {
+        console.log(popUpListError)
+        popUpListError.innerText = errorMessage
         errorPopUp.style.display = 'block'
     }
 
@@ -85,8 +86,7 @@
     // Created a function to move disks to the selected tower.
     function moveToTower(selectedDisk) {
         if (selectedTower.lastElementChild != null && selectedTower.lastElementChild.id > selectedDisk.id) {
-            message = errorLargerDisk
-            openErrorPopUp(message)
+            openErrorPopUp(errorLargerDisk)
         } else {
             selectedTower.append(selectedDisk)
             selectedDisk.style.border = "solid"
@@ -108,8 +108,7 @@
             if (selectedDisk && (selectedTower === source || selectedTower === auxiliary || selectedTower === destination)) {
                 moveToTower(selectedDisk)
             } else {
-                message = errorDiskNotSelected
-                openErrorPopUp(message)
+                openErrorPopUp(errorDiskNotSelected)
             }
         }
     }    
