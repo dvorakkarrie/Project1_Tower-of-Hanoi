@@ -15,9 +15,9 @@
     const close = document.querySelector('.close')
 
     // Defined variables for the user to select the desired number of disks.
+    const levelDiv = document.querySelector('.level')
     const dropdownButton = document.querySelector('.dropdownButton')
-    // let level = document.querySelector('.dropdown').value
-    // console.log(level)
+
 
     // Defined variables to count the moves and time it takes for the player to complete the game.
     const moveCounter = document.querySelector('#moves-counter')
@@ -27,19 +27,11 @@
     let timeString
     let timeVariable
 
+    // Defined variables for the three towers that will be used when moving the disks.
     let towerContainer = document.querySelector('.towerContainer')
-    let towers = document.querySelectorAll('.tower')
     let source = document.querySelector('#source')
     let auxiliary = document.querySelector('#auxiliary')
     let destination = document.querySelector('#destination')
-    console.log(source,auxiliary,destination)
-
-    let diskClass = document.querySelectorAll('.disk')
-    let disk1 = document.querySelector('.disk1')
-    let disk2 = document.querySelector('.disk2')
-    let disk3 = document.querySelector('.disk3')
-
-    let selectedDisk = null
 
     // Defined a variable for the user to restart the game.
     const restart = document.querySelector('.restart')
@@ -48,80 +40,51 @@
     // Created a function to restart the game.
     function restartGame() {
         location.reload();
-        console.log("restart was clicked")
     }
     restart.addEventListener('click', restartGame)
 
     // Created functions and event listeners for the pop up instructions window.
     function openPopUp() {
         popUp.style.display = 'block';
-        console.log("instructions was clicked")
     }
     instructions.addEventListener('click', openPopUp)
 
     function closePopUp() {
         popUp.style.display = "none"
-        console.log("close was clicked")
     }
     close.addEventListener('click', closePopUp)
 
     // Created a function to alert the user they won the game.
-    function win(level) {
-        console.log("Did I win yet?")
-        console.log(typeof destination.childElementCount)
-        console.log(typeof this.level)
+    function win() {
         if (destination.childElementCount === parseInt(this.level)) {
+            let wonMessage = document.querySelector('#wonMessage')
+            let restartMessage = document.querySelector('#restartMessage')
+            wonMessage.style.display = "block"
+            restartMessage.style.display = "block"
             clearInterval(timeVariable)
-            alert("You won!  Select the Restart button to play again.")
         }
     }
 
-    function countMoves() {
-        moveCounter.textContent++
-    }
-
     function moveToTower(selectedDisk) {
-        console.log("selectedTower.lastElementChild is:  ")
-        console.log(selectedTower.lastElementChild)
-        console.log("selectedDisk.id is:  ")
-        console.log(selectedDisk.id)
         if (selectedTower.lastElementChild != null && selectedTower.lastElementChild.id > selectedDisk.id) {
             alert("A larger disk can not be placed on a smaller disk.")
         } else {
-            selectedTower.append(selectedDisk)
-            selectedDisk.style.border = "solid"
-            console.log(selectedDisk,selectedTower)
-            selectedDisk = ""
-            selectedTower = ""
-            console.log(selectedDisk,selectedTower)
-            countMoves()
+            selectedTower.append(selectedDisk), selectedDisk.style.border = "solid", moveCounter.textContent++, 
             win()
         }
     }
 
     function moveDisk(event) {
-        console.log("towerContainer was clicked")
-        console.log("The event is:  ")
-        console.log(event)
-        console.log("The selected disk is:  ")
-        console.log(selectedDisk)
-        if (
-            // selectedDisk === null && 
-            (event.target === towers[0].lastElementChild || event.target === towers[1].lastElementChild || 
-            event.target === towers[2].lastElementChild)) {
-                selectedDisk = event.target
-                selectedDisk.style.border = "dotted"
-                console.log(selectedDisk)
-            } else {
-                selectedTower = event.target
-                if (selectedTower === source || selectedTower === auxiliary || selectedTower === destination) {
-                    moveToTower(selectedDisk)
-                }
+        if (event.target === source.lastElementChild || event.target === auxiliary.lastElementChild || 
+            event.target === destination.lastElementChild) {
+            selectedDisk = event.target
+            selectedDisk.style.border = "dotted"
+        } else {
+            selectedTower = event.target
+            if (selectedTower === source || selectedTower === auxiliary || selectedTower === destination) {
+                moveToTower(selectedDisk)
             }
-        console.log("Source disk count:  " + source.childElementCount)
-        console.log("Auxiliary disk count:  " + auxiliary.childElementCount)
-        console.log("Destination disk count:  " + destination.childElementCount)
-
+        }
     }    
     
     // Created a function to count the time.
@@ -139,39 +102,71 @@
         timeCounter.textContent = `${minutes}:${timeString}`
     }
 
-    function addDisk4 (level) {
+    function addDisk4() {
         let disk4 = document.createElement('div')
         disk4.classList.add('disk')
         disk4.classList.add('disk4')
         disk4.innerText = 'Disk 4'
         disk4.setAttribute('id','4')
-        source.appendChild(disk4);
-        return disk4
+        source.appendChild(disk4)
     }
-
-    function addDisk5 (level) {
+    function addDisk5() {
         let disk5 = document.createElement('div')
         disk5.classList.add('disk')
         disk5.classList.add('disk5')
         disk5.innerText = 'Disk 5'
         disk5.setAttribute('id','5')
-        source.appendChild(disk5);
-        return disk5
+        source.appendChild(disk5)
+    }
+    function addDisk6() {
+        let disk6 = document.createElement('div')
+        disk6.classList.add('disk')
+        disk6.classList.add('disk6')
+        disk6.innerText = 'Disk 6'
+        disk6.setAttribute('id','6')
+        source.appendChild(disk6)
+    }
+    function addDisk7() {
+        let disk7 = document.createElement('div')
+        disk7.classList.add('disk')
+        disk7.classList.add('disk7')
+        disk7.innerText = 'Disk 7'
+        disk7.setAttribute('id','7')
+        source.appendChild(disk7)
+    }
+    function addDisk8() {
+        let disk8 = document.createElement('div')
+        disk8.classList.add('disk')
+        disk8.classList.add('disk8')
+        disk8.innerText = 'Disk 8'
+        disk8.setAttribute('id','8')
+        source.appendChild(disk8)
     }
 
     // Created a function to set up the level, number of disks and timer. 
     function getSelectedLevel() {
-        console.log("dropdownButton was clicked")
         level = document.querySelector('.dropdown').value
         let i = level - 1
 
-        if (level === "4") {
+
+        if (parseInt(level) > 3) {
             addDisk4()
-        } else if (level === "5") {
-            addDisk4()
-            addDisk5()
-        }
-        dropdownButton.style.display = "none"
+            if (parseInt(level) > 4) {
+                addDisk5()
+                if (parseInt(level) > 5) {
+                    addDisk6()
+                    if (parseInt(level) > 6) {
+                        addDisk7()
+                        if (parseInt(level) > 7) {
+                            addDisk8()
+                        }
+                    }
+                }
+            }
+        } 
+
+        levelDiv.style.display = "none"
+        towerContainer.style.display = "flex"
         towerContainer.addEventListener('click',moveDisk)
         timeVariable = setInterval(countTime,1000)
     }

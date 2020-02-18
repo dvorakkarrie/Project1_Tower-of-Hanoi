@@ -7,7 +7,7 @@ body {
 }
 header {
     font-weight: 600;
-    height: 200px;
+    height: 175px;
 }
 
 h1 {
@@ -33,10 +33,14 @@ h3 {
 }
 #myPopUp {
     font-size: 18px;
-    font-weight: 800;
+    
 }
 #myInstructions {
     text-decoration-line: underline;
+}
+#instructionsTitle {
+    font-size: 26px;
+    font: bold;
 }
 .level {
     display: flex;
@@ -54,7 +58,6 @@ select {
     width: 40px;
 }
 .dropdownButton {
-    background-color: rgb(169, 10, 10);
     border-radius: 20px;
     color: white;
     display: flex;
@@ -87,7 +90,7 @@ select {
 }
 .towerContainer {
     border: 1px black solid;
-    display: flex;
+    display: none;
     justify-content: space-between;
     margin: auto;
 }
@@ -97,7 +100,7 @@ select {
     color: white;
     display: flex;
     flex-direction: column-reverse;
-    height: 26px;
+    height: 30px;
     list-style: none;
     margin: 380px 0 0;
     width: 300px;
@@ -105,57 +108,84 @@ select {
     text-align: center;
     
 }
+.tower:hover {
+    background-color: gray;
+}
 .disk {
     border: 2px black solid;
-    color: black;
     border-radius: 20px;
+    color: black;
     display: block;
     flex-direction: column-reverse;
     height: 50px;
-    margin: auto;
+    margin: 1px auto;
     width: 225px;
 }
 .disk1 {
-    width: 225px;
-    background-color: red;
+    width: 250px;
+    background-color: rgb(223, 44, 44)
 }
 .disk2 {
-    width: 200px;
-    background-color: orange;
+    width: 225px;
+    background-color: rgb(218, 120, 35);
 }
 .disk3 {
-    width: 175px;
-    background-color: yellow;
+    width: 200px;
+    background-color: rgb(223, 223, 41);
 }
 .disk4 {
-    width: 150px;
-    background-color: greenyellow;
+    width: 175px;
+    background-color: rgb(102, 216, 44);
 }
 .disk5 {
-    width: 125px;
-    background-color: green;
+    width: 150px;
+    background-color: rgb(43, 223, 226);
 }
 .disk6 {
-    width: 100px;
-    background-color: blue;
+    width: 125px;
+    background-color: rgb(58, 119, 224);
 }
 .disk7 {
-    width: 75px;
-    background-color: navy;
+    width: 100px;
+    background-color: rgb(127, 57, 226);
 }
 .disk8 {
-    width: 50px;
-    background-color: purple;
+    width: 75px;
+    background-color: rgb(218, 53, 166);
 }
+#wonMessage {
+    color: rgb(169, 10, 10);
+    display: none;
+    font-family: sans-serif;
+    font-size: 80px;
+    margin: auto;
+    padding: 50px;
+    text-align: center;
+}
+#restartMessage {
+    color: rgb(165, 127, 127);
+    display: none;
+    font-family: sans-serif;
+    font-weight: 400;
+    margin: auto;
+    text-align: center;
 
+}
+#restartBold {
+    color: rgb(169, 10, 10);
+    font-weight: 800;
+}
 button {
-    background-color: rgb(169, 10, 10);
+    background-color: rgb(165, 127, 127);
     border-radius: 20px;
     color: white;
     display: flex;
     font-size: 18px;
     padding: 5px 15px;
     margin: 40px auto;
+}
+button:hover {
+    background-color: rgb(169, 10, 10);
 }
 .close {
     background-color: rgb(169, 10, 10);

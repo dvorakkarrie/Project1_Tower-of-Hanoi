@@ -12,10 +12,10 @@
         <h3 id="myInstructions" class="instructions">Instructions</h3>
             <div id="myPopUp" class="popUp">
                 <span class="close">&times;</span>
-                <ul class="popUpHeader">** Rules of the game:
+                <ul class="popUpHeader"><span id="instructionsTitle">Rules of the game:</span>
                     <li class="popUpList">Only one disk can be moved at a time.</li>
                     <li class="popUpList">No larger disk can appear on a smaller disk.</li>
-                    <li class="popUpList">Only one top most disk can be moved from one tower and it can appear only at the top most position of another tower.</li>
+                    <li class="popUpList">Only one disk at the top of a tower can be moved to the top of another tower.</li>
                     <li class="popUpList">You are to transfer all disks to the right hand tower in the fewest possible moves.</li>
                 </ul>
             </div>
@@ -25,9 +25,14 @@
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
             </select>
             <button class="dropdownButton">Select Level</button>
         </div>
+        <div id='wonMessage'>You Won!</div>
+        <div id='restartMessage'>Select the <span id="restartBold">Restart</span> button to play again.</div>
     </header>
     <div class="towerContainer">
         <div class="counter">
