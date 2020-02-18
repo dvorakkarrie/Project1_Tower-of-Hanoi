@@ -14,9 +14,13 @@
     const instructionPopUp = document.querySelector('#instructionPopUp')
     const close = document.querySelector('.close')
     const closeError = document.querySelector('.closeError')
+    
 
     // Defined variables for the Error pop up window.
     const errorPopUp = document.querySelector('#errorPopUp')
+    const popUpList = document.querySelector('.popUpList')
+    const errorLargerDisk = 'A larger disk can not be placed on a smaller disk.'
+    const errorDiskNotSelected = 'A disk needs to be selected before selecting a tower.'
 
     // Defined variables for the user to select the desired number of disks.
     const levelDiv = document.querySelector('.level')
@@ -35,6 +39,7 @@
     let source = document.querySelector('#source')
     let auxiliary = document.querySelector('#auxiliary')
     let destination = document.querySelector('#destination')
+    let selectedDisk
 
     // Defined a variable for the user to restart the game.
     const restart = document.querySelector('.restart')
@@ -57,7 +62,8 @@
     close.addEventListener('click', closePopUp)
 
     // Created functions and event listeners for the pop up error window.
-    function openErrorPopUp() {
+    function openErrorPopUp(message) {
+        popUpList.innerText = message
         errorPopUp.style.display = 'block'
     }
 
@@ -79,7 +85,8 @@
     // Created a function to move disks to the selected tower.
     function moveToTower(selectedDisk) {
         if (selectedTower.lastElementChild != null && selectedTower.lastElementChild.id > selectedDisk.id) {
-            openErrorPopUp()
+            message = errorLargerDisk
+            openErrorPopUp(message)
         } else {
             selectedTower.append(selectedDisk)
             selectedDisk.style.border = "solid"
@@ -90,15 +97,19 @@
 
     // Created a function to identify the disk or tower that was selected before moving the disk.
     function moveDisk(event) {
-        console.log(event)
+        console.log(event.target === null)
         if (event.target === source.lastElementChild || event.target === auxiliary.lastElementChild || 
             event.target === destination.lastElementChild) {
             selectedDisk = event.target
             selectedDisk.style.border = "dotted"
         } else {
+            selectedDisk
             selectedTower = event.target
-            if (selectedTower === source || selectedTower === auxiliary || selectedTower === destination) {
+            if (selectedDisk && (selectedTower === source || selectedTower === auxiliary || selectedTower === destination)) {
                 moveToTower(selectedDisk)
+            } else {
+                message = errorDiskNotSelected
+                openErrorPopUp(message)
             }
         }
     }    
