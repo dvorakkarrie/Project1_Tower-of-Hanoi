@@ -20,7 +20,7 @@
     const errorPopUp = document.querySelector('#errorPopUp')
     const popUpListError = document.querySelector('.popUpListError')
     const errorLargerDisk = 'A larger disk can not be placed on a smaller disk.'
-    const errorDiskNotSelected = 'Select a disk before a tower can be selected.'
+    const errorDiskNotSelected = 'A disk needs to be selected before selecting a tower.'
 
     // Defined variables for the user to select the desired number of disks.
     const levelDiv = document.querySelector('.level')
