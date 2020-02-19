@@ -133,8 +133,6 @@
         j = i + 1
         diskArray[i] = document.createElement('div')
         diskArray[i].classList.add('animated','slow','slideInDown','disk','disk' + j)
-        // diskArray[i].classList.add('disk')
-        // diskArray[i].classList.add('disk' + j)
         diskArray[i].innerText = "Disk"
         diskArray[i].setAttribute('id',j)
         source.appendChild(diskArray[i])
@@ -150,6 +148,7 @@
 
         levelDiv.style.display = "none"
         towerContainer.style.display = "flex"
+        restart.style.display = "flex"
         towerContainer.addEventListener('click',moveDisk)
         timeVariable = setInterval(countTime,1000)
     }

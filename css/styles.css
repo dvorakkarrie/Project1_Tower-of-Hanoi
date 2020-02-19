@@ -1,6 +1,6 @@
 body {
-    background-color: rgb(249, 252, 216);
-    color: rgb(169, 10, 10);
+    background-color: rgb(251, 252, 238);
+    color: rgb(0, 128, 0);
     font-size: 18px;
     font-family: cursive, sans-serif;
     height: 700px;
@@ -50,11 +50,12 @@ h3 {
     text-align: center;
 }
 .level {
+    color: rgb(169, 10, 10);
     display: flex;
     justify-content: flex-start;
     font-size: 18px;
     font-weight: 600;
-    margin: 0;
+    margin: 5px 0;
     padding: 0 10px;
 }
 select {
@@ -65,12 +66,6 @@ select {
     width: 40px;
 }
 .dropdownButton {
-    border-radius: 20px;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    font-size: 16px;
-    padding: 5px 15px;
     margin: 0 20px;
 }
 .counter {
@@ -177,13 +172,16 @@ select {
     text-align: center;
 }
 #wonMessage {
-    color: rgb(0, 128, 0);
+    color: rgb(169, 10, 10);
     font-size: 100px;
     padding: 50px;
 }
 #restartMessage {
     color: rgb(0, 128, 0);
     font-weight: 400;
+}
+.restart {
+    display: none;
 }
 .error {
     display: none;
@@ -202,6 +200,7 @@ button {
     color: white;
     display: flex;
     font-size: 18px;
+    justify-content: space-between;
     padding: 5px 15px;
     margin: 40px auto;
 }
