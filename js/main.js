@@ -91,6 +91,7 @@
             openErrorPopUp(errorLargerDisk)
         } else {
             selectedTower.append(selectedDisk)
+            selectedDisk.style.border = "3px black solid"
             moveCounter.textContent++, 
             win()
         }
@@ -102,6 +103,7 @@
         if (event.target === source.lastElementChild || event.target === auxiliary.lastElementChild || 
             event.target === destination.lastElementChild) {
             selectedDisk = event.target
+            selectedDisk.style.border = "3px black dashed"
         } else {
             selectedDisk
             selectedTower = event.target
