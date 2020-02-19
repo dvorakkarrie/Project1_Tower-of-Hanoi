@@ -14,6 +14,7 @@ No need.
 
  ## Technology Used:
 - Animate.css:  Added animation to the disks and winning message
+- CodePen: Reviewed other game javascript code
 - Command Line:  Navigated files and interacted with GitHub
 - Google Chrome:  Developer Tools used to debug and review code and tested the application via the browser
 - OneNote:  Built wireframe
@@ -39,12 +40,10 @@ The main approach for this game was to track the number of moves and time used a
 As a user, I should see a message that I won when I move all the disks to the right hand tower.
 - As a user, I should see a message to restart the game after the user wins.
 
-
-
 ## Unsolved Problems
+- The user has a limited amount of space to click when moving the selected disk from one tower to another.
 
 ## Future Plans
 - Apply draggable feature to the disks.
-- Develop process to store the user's time, moves and number of wins.
-- Add a automated solve feature to reflect the ideal number of moves.
-
+- Develop a process to store the user's time, moves and number of wins.
+- Add a automated solve feature to show the user the ideal moves.
