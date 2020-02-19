@@ -12,8 +12,9 @@
         <h1 class="title">Tower of Hanoi</h1>
         <h3 class="instructions">Instructions</h3>
             <div class="popUp" id="instructionPopUp">
-                <span class="close">&times</span>
-                <ul class="open"><span id="popUpTitle">Rules of the game:</span>
+                <div class="close">X</div>
+                <div class="popUpTitle">Rules of the game</div>
+                <ul>
                     <li class="popUpList">The objective is to transfer all disks to the right hand tower in the fewest possible moves.</li>
                     <li class="popUpList">Only one disk at the top of a tower can be moved at a time to the top of another tower.</li>
                     <li class="popUpList">A larger disk can not be placed on top of a smaller disk.</li>
@@ -41,8 +42,9 @@
         <div class='message animated flash' id='wonMessage'>Y&nbsp;o&nbsp;u&nbsp;&nbsp;&nbsp;W&nbsp;o&nbsp;n&nbsp;!</div>
         <div class='message' id='restartMessage'>Select the <span id="bold">Restart</span> button to play again.</div>
         <div class='popUp' id='errorPopUp'>
-            <span class="close closeError">&times</span>
-            <ul class="open"><span id="popUpTitle">Error:</span>
+            <div class="close closeError">X</div>
+            <div class="popUpTitle">Error Message</div>
+            <ul>
                 <li class="popUpListError"></li>
             </ul>
         </div>
