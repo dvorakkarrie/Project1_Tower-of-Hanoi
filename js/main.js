@@ -13,14 +13,14 @@
     const instructions = document.querySelector('.instructions')
     const instructionPopUp = document.querySelector('#instructionPopUp')
     const close = document.querySelector('.close')
-    const closeError = document.querySelector('.closeError')
     
-
     // Defined variables for the Error pop up window.
     const errorPopUp = document.querySelector('#errorPopUp')
     const popUpListError = document.querySelector('.popUpListError')
+    const closeError = document.querySelector('.closeError')
     const errorLargerDisk = 'A larger disk can not be placed on a smaller disk.'
     const errorDiskNotSelected = 'A disk needs to be selected before selecting a tower.'
+
 
     // Defined variables for the user to select the desired number of disks.
     const levelDiv = document.querySelector('.level')
@@ -34,22 +34,26 @@
     let timeString
     let timeVariable
 
-    // Defined variables for the three towers that will be used when moving the disks.
+    // Defined an array of the disks that can be added in a for loop based upon the user's selection.
+    let diskArray = ['disk1','disk2','disk3','disk4','disk5','disk6','disk7','disk8']
+
+    // Defined varialbes for the game board and disk selected during the game.
     let towerContainer = document.querySelector('.towerContainer')
+    let selectedDisk
+
+    // Defined variables for the three towers that will be used when moving the disks.
     let source = document.querySelector('#source')
     let auxiliary = document.querySelector('#auxiliary')
     let destination = document.querySelector('#destination')
-    let selectedDisk
-    let diskArray = ['disk1','disk2','disk3','disk4','disk5','disk6','disk7','disk8']
 
     // Defined a variable for the user to restart the game.
-    const restart = document.querySelector('.restart')
+    const restartButton = document.querySelector('.restartButton')
 
     // Created a function to restart the game.
     function restartGame() {
         location.reload();
     }
-    restart.addEventListener('click', restartGame)
+    restartButton.addEventListener('click', restartGame)
 
     // Created functions and event listeners for the Instructions pop up window.
     function openPopUp() {
@@ -148,7 +152,7 @@
 
         levelDiv.style.display = "none"
         towerContainer.style.display = "flex"
-        restart.style.display = "flex"
+        restartButton.style.display = "flex"
         towerContainer.addEventListener('click',moveDisk)
         timeVariable = setInterval(countTime,1000)
     }

@@ -184,7 +184,7 @@ select {
     color: rgb(0, 128, 0);
     font-weight: 400;
 }
-.restart {
+.restartButton {
     display: none;
 }
 .error {

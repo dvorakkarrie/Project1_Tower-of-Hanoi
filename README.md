@@ -28,7 +28,11 @@ The main approach for this game was to track the number of moves and time used a
 - Restart button
 - Animation added
 
-## User Stories: 
+## User Stories:
+- As a user, I should be able to view the instructions before and while I play the game.
+- As a user, I should be able to select the desired number of disks before I play the game.
+- As a user, I should be able to restart the game before and after the game ends.
+
 
 ## Unsolved Problems
 
