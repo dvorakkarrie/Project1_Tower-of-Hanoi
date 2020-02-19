@@ -50,7 +50,7 @@
     }
     restart.addEventListener('click', restartGame)
 
-    // Created functions and event listeners for the pop up instructions window.
+    // Created functions and event listeners for the Instructions pop up window.
     function openPopUp() {
         instructionPopUp.style.display = 'block'
     }
@@ -61,7 +61,7 @@
     }
     close.addEventListener('click', closePopUp)
 
-    // Created functions and event listeners for the pop up error window.
+    // Created functions and event listeners for the Error pop up window.
     function openErrorPopUp(errorMessage) {
         popUpListError.innerText = errorMessage
         errorPopUp.style.display = 'block'
