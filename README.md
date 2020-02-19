@@ -1,17 +1,12 @@
 # dvorakkarrie.github.io
 
-## Description
+# GA- Project 1: Tower of Hanoi
 
-##Installation Instructions
+## Installation:
+No need.
 
-...
-git clone git clone https://git.generalassembly.ly/jdr-0127/react-bitcoin-prices.git
-cd react-bitcoin-prices.git
-npm install
-code .
-npm run start
-...
+## Links:
+- Wireframe:
+![](images/ga-project-1-wireframe.jpeg)
 
-![](https://i.imgur.com/0QBd4Uz.png)
-
-[Link to google](https://google.com)
+ - [Link to Tower of Hanoi Game](https://dvorakkarrie.github.io/)
