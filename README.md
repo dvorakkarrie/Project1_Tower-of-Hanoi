@@ -31,7 +31,14 @@ The main approach for this game was to track the number of moves and time used a
 ## User Stories:
 - As a user, I should be able to view the instructions before and while I play the game.
 - As a user, I should be able to select the desired number of disks before I play the game.
-- As a user, I should be able to restart the game before and after the game ends.
+- As a user, I should be able to restart the game after selecting the level and after the game ends.
+- As a user, I should be able to select a top most disk from one tower and move it to another tower.
+- As a user, I should see an error message if I select a tower before I have selected a disk to move.
+- As a user, I should not be able to place a larger disk on a smaller disk.
+- As a user, I should be shown an error message if I try to place a larger disk on a smaller one.
+As a user, I should see a message that I won when I move all the disks to the right hand tower.
+- As a user, I should see a message to restart the game after the user wins.
+
 
 
 ## Unsolved Problems
