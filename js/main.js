@@ -40,6 +40,7 @@
     let auxiliary = document.querySelector('#auxiliary')
     let destination = document.querySelector('#destination')
     let selectedDisk
+    let diskArray = ['disk1','disk2','disk3','disk4','disk5','disk6','disk7','disk8']
 
     // Defined a variable for the user to restart the game.
     const restart = document.querySelector('.restart')
@@ -99,13 +100,11 @@
 
     // Created a function to identify the disk or tower that was selected before moving the disk.
     function moveDisk(event) {
-        console.log(event.target === null)
         if (event.target === source.lastElementChild || event.target === auxiliary.lastElementChild || 
             event.target === destination.lastElementChild) {
             selectedDisk = event.target
             selectedDisk.style.border = "3px black dashed"
         } else {
-            selectedDisk
             selectedTower = event.target
             if (selectedDisk && (selectedTower === source || selectedTower === auxiliary || selectedTower === destination)) {
                 moveToTower(selectedDisk)
@@ -130,68 +129,23 @@
         timeCounter.textContent = `${minutes}:${timeString}`
     }
 
-    // Created functions to add the selected number of disks to the game.
-    function addDisk4() {
-        let disk4 = document.createElement('div')
-        disk4.classList.add('disk')
-        disk4.classList.add('disk4')
-        disk4.innerText = 'Disk 4'
-        disk4.setAttribute('id','4')
-        source.appendChild(disk4)
-    }
-    function addDisk5() {
-        let disk5 = document.createElement('div')
-        disk5.classList.add('disk')
-        disk5.classList.add('disk5')
-        disk5.innerText = 'Disk 5'
-        disk5.setAttribute('id','5')
-        source.appendChild(disk5)
-    }
-    function addDisk6() {
-        let disk6 = document.createElement('div')
-        disk6.classList.add('disk')
-        disk6.classList.add('disk6')
-        disk6.innerText = 'Disk 6'
-        disk6.setAttribute('id','6')
-        source.appendChild(disk6)
-    }
-    function addDisk7() {
-        let disk7 = document.createElement('div')
-        disk7.classList.add('disk')
-        disk7.classList.add('disk7')
-        disk7.innerText = 'Disk 7'
-        disk7.setAttribute('id','7')
-        source.appendChild(disk7)
-    }
-    function addDisk8() {
-        let disk8 = document.createElement('div')
-        disk8.classList.add('disk')
-        disk8.classList.add('disk8')
-        disk8.innerText = 'Disk 8'
-        disk8.setAttribute('id','8')
-        source.appendChild(disk8)
+    function addNewDisk(i) {
+        j = i + 1
+        diskArray[i] = document.createElement('div')
+        diskArray[i].classList.add('disk')
+        diskArray[i].classList.add('disk' + j)
+        diskArray[i].innerText = "Disk"
+        diskArray[i].setAttribute('id',j)
+        source.appendChild(diskArray[i])
     }
 
     // Created a function to set up the level, number of disks and timer. 
     function getSelectedLevel() {
         level = document.querySelector('.dropdown').value
-        let i = level - 1
 
-        if (parseInt(level) > 3) {
-            addDisk4()
-            if (parseInt(level) > 4) {
-                addDisk5()
-                if (parseInt(level) > 5) {
-                    addDisk6()
-                    if (parseInt(level) > 6) {
-                        addDisk7()
-                        if (parseInt(level) > 7) {
-                            addDisk8()
-                        }
-                    }
-                }
-            }
-        } 
+        for (let i = 0; i < level; i ++) {
+            addNewDisk(i)
+        }
 
         levelDiv.style.display = "none"
         towerContainer.style.display = "flex"
