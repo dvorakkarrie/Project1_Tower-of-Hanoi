@@ -132,8 +132,9 @@
     function addNewDisk(i) {
         j = i + 1
         diskArray[i] = document.createElement('div')
-        diskArray[i].classList.add('disk')
-        diskArray[i].classList.add('disk' + j)
+        diskArray[i].classList.add('animated','slow','slideInDown','disk','disk' + j)
+        // diskArray[i].classList.add('disk')
+        // diskArray[i].classList.add('disk' + j)
         diskArray[i].innerText = "Disk"
         diskArray[i].setAttribute('id',j)
         source.appendChild(diskArray[i])
