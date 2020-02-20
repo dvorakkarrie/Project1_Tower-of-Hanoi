@@ -7,7 +7,7 @@ No need.
 - Wireframe:
 ![](images/ga-project-1-wireframe.jpg)
 
- - [Link to Tower of Hanoi Game](https://dvorakkarrie.github.io/)
+ - [Link to Tower of Hanoi Game](https://dvorakkarrie.github.io/Project1_Tower-of-Hanoi/)
 
  ## Preview:
  The above link will direct you to a Tower of Hanoi game with counters to track the time and number of moves required to complete the game after selecting the desired number of disks.
