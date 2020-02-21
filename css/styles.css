@@ -211,3 +211,11 @@ button {
 button:hover {
     background-color: rgb(169, 10, 10);
 }
+
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+        
+        padding: 0;
+    }
+}

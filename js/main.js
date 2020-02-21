@@ -95,7 +95,7 @@
         } else {
             selectedTower.append(selectedDisk)
             selectedDisk.style.border = "3px black solid"
-            moveCounter.textContent++, 
+            moveCounter.textContent++
             win()
         }
     }
