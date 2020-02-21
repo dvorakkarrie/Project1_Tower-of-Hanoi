@@ -10,7 +10,7 @@ No need.
  - [Link to Tower of Hanoi Game](https://dvorakkarrie.github.io/Project1_Tower-of-Hanoi/)
 
  ## Preview:
- The above link will direct you to a Tower of Hanoi game with counters to track the user's time and the number of moves before successfully placing all the largest to smallest disks to the right hand tower.  Before starting the game, the user will be able to select a range of three to eight disks to include in game.
+ The above link will direct you to a Tower of Hanoi game with counters to track the user's time and the number of moves to successfully place all the disks from largest to smallest in the right hand tower.  Before starting the game, the user will be able to select three to eight disks to include in the game.
 
  ## Technology Used:
 - Animate.css:  Added animation to the disks and winning message
@@ -22,7 +22,7 @@ No need.
 - YouTube: Watched several videos regarding coding and play the Tower of Hanoi game.
 
 ## Approach:
-The main approach for this game was to track the number of moves and time as the user successfully moved the disks from the left hand tower to the right hand tower. An array and a for loop was used to create the disks.  Conditional statements were also used to display/count the time, select/move the disks and determine when the user won the game.
+The main approach for this game was to track the number of moves and time the user took to move all disks from the left tower to the right hand tower.  An array and a for loop was used to create the disks.  Conditional statements were also used to count/display the time, select/move the disks and determine when the user won the game.
 
 ## Main features:
 - Dropdown list to select the number of disks

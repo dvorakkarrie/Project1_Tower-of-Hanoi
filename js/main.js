@@ -9,6 +9,7 @@
 //  - Additionally, your project should stick with KISS (Keep It Stupid Simple) and DRY (Don't Repeat Yourself) principles.
 
 (function(window){
+
     // Defined variables for the Instructions pop up window.
     const instructions = document.querySelector('.instructions')
     const instructionPopUp = document.querySelector('#instructionPopUp')
@@ -154,5 +155,6 @@
         timeVariable = setInterval(countTime,1000)
     }
     dropdownButton.addEventListener('click', getSelectedLevel)
-
+    
+    localStorage
 })(window);
