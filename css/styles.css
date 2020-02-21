@@ -178,10 +178,12 @@ select {
     color: rgb(169, 10, 10);
     font-size: 100px;
     padding: 50px;
+    margin: auto;
 }
 #restartMessage {
     color: rgb(0, 128, 0);
     font-weight: 400;
+    margin: auto;
 }
 .restartButton {
     display: none;
@@ -211,49 +213,49 @@ button:hover {
     background-color: rgb(169, 10, 10);
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
     body {
-        font-size: 16px;
-        width: 75%;
-        padding: 0%;
+        padding: 0px;
+        width: 400px;
     }
     .popUp {
-        width: 350px;
-    }
-    .select {
-        width: 45px;
+        width: 400px;
     }
     .tower {
-        width: 200px;
+        width: 180px;
     }
     .disk {
-        width:190px;
+        width:160px;
     }
     .disk1 {
-        width: 175px;
+        width: 155px;
     }
     .disk2 {
-        width: 160px;
+        width: 140px;
     }
     .disk3 {
-        width: 145px;
+        width: 125px;
     }
     .disk4 {
-        width: 130px;
+        width: 110px;
     }
     .disk5 {
-        width: 115px;
+        width: 95px;
     }
     .disk6 {
-        width: 100px;
+        width: 80px;
     }
     .disk7 {
-        width: 85px;
+        width: 65px;
     }
     .disk8 {
-        width: 70px;
+        width: 50px;
     }
     .space {
         width: 0px;
+    }
+    #wonMessage {
+    font-size: 50px;
+    padding: 0px;
     }
 }
